@@ -4,8 +4,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import outils.Exercice;
+import outils.*;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /** Ne modifiez ni les noms des classes, ni les noms des méthodes.
  * Utilisez Resultat.log pour afficher les résultats
@@ -27,7 +29,15 @@ public class Ex07_RechercheMin {
 	public void rechercherMin() {
 		
 		//TODO Grâce à un algorithme, recherchez le minimum du tableau et LOGUEZ le.
+		int min = 0;
 		
+		for(int i=0; i<array.length;i++) {
+			if(min > array[i]) {
+				min = array[i];
+			}
+		}
+		
+		Resultat.log(min);
 	}
 
 }

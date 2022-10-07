@@ -2,7 +2,7 @@ package fr.algorithmie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
+import outils.*;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
@@ -27,6 +27,15 @@ public class Ex06_RechercheMax {
 	public void rechercherMax() {
 		
 		//TODO Grâce à un algorithme, recherchez le maximum du tableau et LOGUEZ le.
+		int max = 0;
+		
+		for(int i=0; i<array.length;i++) {
+			if(max < array[i]) {
+				max = array[i];
+			}
+		}
+		
+		Resultat.log(max);
 		
 	}
 

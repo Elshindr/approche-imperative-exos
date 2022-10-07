@@ -2,7 +2,7 @@ package fr.algorithmie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
+import outils.*;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
@@ -31,5 +31,18 @@ public class Ex10_ComparaisonTableau {
 		// TODO LOGUER le nombre de valeurs communes aux 2 tableaux.
 		// Exemple : On peut déjà voir que les valeurs 3 et 8 sont communes aux 2 tableaux, mais
 		// Combien y en a t'il au total ?
+		
+		int nbVal = 0;
+		
+		for(int i = 0; i < array1.length; i++) {
+			for(int j=0; j<array2.length; j++) {
+				if(array1[i] == array2[j]) {
+					nbVal++;
+					break;
+				}
+			}
+		}
+		
+		Resultat.log(nbVal);
 	}
 }

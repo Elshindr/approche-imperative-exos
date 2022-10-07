@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -31,7 +32,24 @@ public class Ex13_Rotation {
 		// TODO Effectuez une rotation à droite des éléments du tableau array
 		// Exemple : si le tableau contient {0,1,2,3} alors il contiendra {3,0,1,2}
 		// après rotation
+		// AV {0,1,2,3}
+		// AP {3,0,1,2}
+		int[] arrIntm = new int[array.length];
+		int decalage = 1;
 		
+		for (int i=0; i < arrIntm.length; i++) {
+			
+			if(i == 0) {
+				arrIntm[i] = array[array.length-1];
+			}
+			else {
+				arrIntm[i] = array[i-1];
+			}
+			 
+			Resultat.log(arrIntm[i]);
+			
+		}
+
 		// TODO Afficher le contenu du tableau après rotation avec Resultat.log
 	}
 

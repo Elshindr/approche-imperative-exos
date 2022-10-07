@@ -2,7 +2,7 @@ package fr.algorithmie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
+import outils.*;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
@@ -24,6 +24,9 @@ public class Ex03_AffichageTableau {
 	public void affichageTableau() {
 		
 		//TODO LOGUER les éléments du tableau grâce à une boucle
+		for(int i : array) {
+			Resultat.log(i);
+		}
 	}
 	
 	@Test
@@ -31,5 +34,8 @@ public class Ex03_AffichageTableau {
 	public void affichageTableauOrdreInverse() {
 		
 		//TODO LOGUER les éléments du tableau dans l'ordre inverse
+		for(int i = array.length-1; i>=0; i--) {
+			Resultat.log(array[i]);
+		}
 	}
 }

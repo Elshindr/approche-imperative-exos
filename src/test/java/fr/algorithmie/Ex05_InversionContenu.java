@@ -2,7 +2,7 @@ package fr.algorithmie;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
+import outils.*;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
@@ -24,9 +24,18 @@ public class Ex05_InversionContenu {
 	public void affichageTableauArrayCopy() {
 		
 		// TODO Créer un tableau nommé arrayCopy et qui contient les mêmes nombres
-		// que dans le tableau array mais dans l'ordre inverse. 
-		// Pour être plus précis, arrayCopy commence par les nombres suivants : -4, 14, 0, etc..
+		// que dans le tableau array mais dans l'ordre inverse.
+		int[] arrayCopy = new int[array.length];
+		System.out.println("copier");
+		for(int i = array.length-1; i>=0; i--) {
+			int j = array.length-i-1;
+			arrayCopy[j] = array[i];
+		}
 		
 		// TODO LOGUER le contenu de ce tableau arrayCopy
+		System.out.println("coller");
+		for(int i : arrayCopy) {
+			Resultat.log(i);
+		}
 	}
 }
